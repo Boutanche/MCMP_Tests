@@ -1,0 +1,68 @@
+.header-right .hr-btn i {
+  background: black;
+ }
+.header-nav{
+  background-color: black;
+}
+#navigation {
+  a.active{
+    color: red;
+    text-decoration: underline;
+  }
+  a{
+    color: whitesmoke;
+  }
+  a:hover{
+    color: red;
+  }
+  .btn:hover{
+    color: #212529;
+  }
+}
+.modal {
+  display: none;
+}
+.modal-content{
+  display: none;
+  color: white;
+  background-color: #4e555b;
+  padding-top: 5px;
+}
+.btn-modal{
+  color: white;
+  background-color: black;
+  border-color: #4e555b;
+  }
+.btn-modal:hover{
+  background-color: #c82333;
+}
+.btn-modal:active {
+  background-color: #c82333;
+}
+#modal_log{
+  padding-top: 0px;
+  height: 60px;
+  width: 600px;
+  input{
+    height: 25px;
+  }
+  p{
+    color: white;
+  };
+}
+#login_mod{
+  position: relative;
+  padding-left: 60%;
+}
+.dropdown-menu{
+  display: contents;
+  border-color: #4e555b;
+  background-color: #4c4c4c;
+  float: right;
+  position : relative;
+  margin-right: 10px;
+}
+.page-top{
+  color: #c6c8ca;
+}
+

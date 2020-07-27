@@ -1,0 +1,153 @@
+/* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.header-right .hr-btn i {
+  background: black;
+}
+
+/* line 4, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.header-nav {
+  background-color: black;
+}
+
+/* line 8, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#navigation a.active {
+  color: red;
+  text-decoration: underline;
+}
+
+/* line 12, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#navigation a {
+  color: whitesmoke;
+}
+
+/* line 15, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#navigation a:hover {
+  color: red;
+}
+
+/* line 18, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#navigation .btn:hover {
+  color: #212529;
+}
+
+/* line 22, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.modal {
+  display: none;
+}
+
+/* line 25, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.modal-content {
+  display: none;
+  color: white;
+  background-color: #4e555b;
+  padding-top: 5px;
+}
+
+/* line 31, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.btn-modal {
+  color: white;
+  background-color: black;
+  border-color: #4e555b;
+}
+
+/* line 36, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.btn-modal:hover {
+  background-color: #c82333;
+}
+
+/* line 39, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.btn-modal:active {
+  background-color: #c82333;
+}
+
+/* line 42, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#modal_log {
+  padding-top: 0px;
+  height: 60px;
+  width: 600px;
+}
+
+/* line 46, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#modal_log input {
+  height: 25px;
+}
+
+/* line 49, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#modal_log p {
+  color: white;
+}
+
+/* line 53, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+#login_mod {
+  position: relative;
+  padding-left: 60%;
+}
+
+/* line 57, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.dropdown-menu {
+  display: contents;
+  border-color: #4e555b;
+  background-color: #4c4c4c;
+  float: right;
+  position: relative;
+  margin-right: 10px;
+}
+
+/* line 65, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.page-top {
+  color: #c6c8ca;
+}
+
+/* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+#members {
+  margin-top: 1.5rem;
+}
+
+/* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+#add_member {
+  padding-bottom: 5rem;
+}
+
+/* line 4, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.TitleForm {
+  padding-left: 10rem;
+}
+
+/* line 7, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.contact-form {
+  border: 1px solid black;
+}
+
+/* line 10, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.form-box {
+  box-sizing: content-box;
+  padding-bottom: 10px;
+}
+
+/* line 13, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.form-box #organisation {
+  height: 30px;
+  margin-bottom: 1px;
+}
+
+/* line 18, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.form-box label {
+  margin-bottom: 0px;
+}
+
+/* line 22, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.submit-info {
+  padding-left: 25rem;
+  padding-bottom: 5rem;
+}
+
+/* line 26, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+input[type=checkbox] {
+  height: 30px;
+}
+
+/* line 29, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
+.col_checkbox {
+  padding-right: 25rem;
+}
+
+/*# sourceMappingURL=main.css.map */

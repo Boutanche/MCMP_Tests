@@ -5,7 +5,10 @@ if(!empty($_POST)) {
         if ($_POST['formulaire'] == 'log') {
             if(isset($_POST['login']) AND isset($_POST['password'])) {
                 if (!empty($_POST['login']) and !empty($_POST['password'])) {
-                    $query = 'SELECT IdAdherent, Nom, Prenom, Organisateur FROM adherent WHERE Login = "' . $_POST['login'] . '" AND Password = "' . $_POST['password'] . '"';
+                    $query = 'SELECT IdAdherent, Nom, Prenom, Organisateur 
+                                FROM adherent 
+                                WHERE Login = "' . $_POST['login'] . '" 
+                                    AND Password = "' . $_POST['password'] . '"';
                     $reponse = $bdd->query($query);
                     if ($reponse->rowCount() == 1) {
                         while ($donnees = $reponse->fetch()) {

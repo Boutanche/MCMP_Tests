@@ -4,7 +4,7 @@ $reponse = $bdd->query('SELECT * FROM page');
     while ($donnees = $reponse->fetch()){
         $ar_page[$donnees['key_file']] = $donnees;
     }
-    $page = 'accueil';
+
     if (isset($_GET['page'])&& !empty($_GET['page'])){
         if(array_key_exists($_GET['page'], $ar_page)){
             $page = $_GET['page'];

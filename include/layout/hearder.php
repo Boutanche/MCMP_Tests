@@ -10,7 +10,7 @@
         <img src="./img/img/logo/logo.png" alt="logo du site MCMP">
     </a>
     <nav class="header-nav">
-        <?php include ('./include/page/nav_dynamique.php');?>
+        <?php include('./include/tmpl/nav_dynamique.php');?>
     </nav>
 </header>
 <!-- Header Section end -->

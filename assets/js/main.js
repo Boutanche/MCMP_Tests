@@ -152,19 +152,25 @@ $(window).on('load', function() {
 
 
 	// Modal :
-
-	if($('#login_mod').length){
-		var modal = document.getElementById("myModal");
-		var btn = document.getElementById("myBtn");
+/*
+	if($('#login_mod')){
+		var modal = $("myModal");
+		var btn = $("myBtn");
 		var span = document.getElementsByClassName("close")[0];
 		var block = document.getElementById("modal_log");
 		btn.onclick = function () {
-			modal.style.display = "block";
+
 		}
 		span.onclick = function () {
 			modal.style.display = "none";
 		}
 	};
-
+*/
+	$('.myBtn').on("click", function () {
+		$('#myModal').show();
+	});
+	$('.close').on("click", function () {
+		$('#myModal').hide();
+	});
 })(jQuery);
 

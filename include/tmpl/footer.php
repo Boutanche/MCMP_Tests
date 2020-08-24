@@ -73,10 +73,7 @@
         <script src="./assets/js/owl.carousel.min.js"></script>
         <script src="./assets/js/jquery-ui.min.js"></script>
         <script src="./vendor/Trumbowyg-master/dist/trumbowyg.min.js"></script>
-
         <!-- Mon code jQuery -->
         <script src="./assets/js/main.js?v=1.<?php echo time() ?>"></script>
-
-
     </body>
 </html>

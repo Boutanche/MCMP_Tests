@@ -1,2 +1,2 @@
 <?php
-include ('./include/layout/hero.php');
+include('./include/tmpl/hero.php');

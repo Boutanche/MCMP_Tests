@@ -2242,7 +2242,7 @@ var Context_Context = /*#__PURE__*/function () {
     this.initialize();
   }
   /**
-   * create layout and initialize modules and other resources
+   * create tmpl and initialize modules and other resources
    */
 
 
@@ -2257,7 +2257,7 @@ var Context_Context = /*#__PURE__*/function () {
       return this;
     }
     /**
-     * destroy modules and other resources and remove layout
+     * destroy modules and other resources and remove tmpl
      */
 
   }, {

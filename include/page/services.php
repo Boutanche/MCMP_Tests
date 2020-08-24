@@ -1,3 +1,3 @@
 <?php
-include ('./include/layout/page_top.php');
-include ('./include/layout/contact.php');
+include('./include/tmpl/page_top.php');
+include('./include/tmpl/contact.php');

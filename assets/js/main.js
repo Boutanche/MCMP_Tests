@@ -139,16 +139,30 @@ $(window).on('load', function() {
 
 
 	// Wysiwyg  :
+	/*
 	if($('#trumbowyg').length){
+		console.log('WYSIWYG is ready !');
+		var title = $('input[name=title]').val();
+		var description = $('#trumbowyg').trumbowyg;
+		console.log ('Tu me dis rien ok');
+		console.log(title);
+		console.log(description);
+		('Tu devrais pas me dire un truc quand bouton envoyé ?')
+
+
+
 		$('#trumbowyg').trumbowyg({
+
 
 		});
 	}
 	$('#trumbowig-envoyer').on("click",function(){
-
+		console.log('Je suis là');
 		$('#newarticle').prepend('<div class="col-12 blue">' + $('#wysiwyg .ql-editor').html() + '</div>');
 
 	});
+
+	 */
 
 
 	// Modal :
@@ -172,5 +186,27 @@ $(window).on('load', function() {
 	$('.close').on("click", function () {
 		$('#myModal').hide();
 	});
+
+	$('#addNews').on('click',function() {
+		console.log('Click is OK !')
+		var call_ajax = $.ajax(
+			{
+				url: "./lib/methode_ajax.php",
+				method: "POST",
+				data: { informations : 1, title:title, description : description },
+				dataType: "json" //ou JSON
+			}
+		);
+		call_ajax.done(function (msg) {
+			console.log("coucou");
+			console.log(msg.title);
+		})
+		call_ajax.fail(function (jqXHR, textStatus) {
+			console.log("Non!" + textStatus);
+		});
+	});
+
+
+
 })(jQuery);
 

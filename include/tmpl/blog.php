@@ -3,6 +3,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
+                <?php
+                include('./lib/post_news.php');
+                foreach ($ar_News as $key => $tb_news) {
+                    if ($tb_news['Diffusion_Level'] == 1) {
+                        echo'
+                            <div class="blog-post">
+                            <img src="img/news/1.jpg" alt="">
+                            <div class="blog-date">' . $tb_news['DPubli'] . '</div>
+                            <h2 class="blog-title">' . $tb_news['Titre'] . '</h2>
+                            <div class="blog-metas">
+                                <div class="blog-meta">By Mark Smith </div>
+                                <div class="blog-meta">In Loans</div>
+                                <div class="blog-meta"> 3 comments</div>
+                            </div>
+                            <p>' . $tb_news['Intro'] . '</p>
+                            <a href="#" class="readmore">Read More <img src="img/arrow.png" alt=""></a>
+                        </div> 
+                        ';
+                    }
+                }
+                ?>
+
                 <div class="blog-post">
                     <img src="img/news/1.jpg" alt="">
                     <div class="blog-date">Apr 08, 2019</div>
@@ -15,6 +37,10 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti.</p>
                     <a href="#" class="readmore">Read More <img src="img/arrow.png" alt=""></a>
                 </div>
+
+
+
+
                 <div class="blog-post">
                     <img src="img/news/2.jpg" alt="">
                     <div class="blog-date">Apr 08, 2019</div>
@@ -92,4 +118,3 @@
         </div>
     </div>
 </section>
-<!-- Blog Section end -->

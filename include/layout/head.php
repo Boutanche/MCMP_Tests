@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./assets/css/slicknav.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="./vendor/Trumbowyg-master/dist/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="./vendor/summernote-0.8.18-dist/summernote.min.css" type="text/css">
     <!-- Main Stylesheets -->
     <link rel="stylesheet" href="./assets/css/main.css?v=1.<?php echo time();?>">
     <!--[if lt IE 9]>

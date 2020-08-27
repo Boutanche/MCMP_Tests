@@ -161,4 +161,30 @@ input[type=checkbox] {
   padding-right: 25rem;
 }
 
+/* line 2, C:/wamp64/www/cda35.reboot/assets/css/sass/_news.scss */
+#modal_AddNews {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+
+/* line 4, C:/wamp64/www/cda35.reboot/assets/css/sass/_news.scss */
+#modal_AddNews .container {
+  background-color: red;
+  margin-top: 5vh;
+  margin-left: 10%;
+  height: 90vh;
+  width: 80%;
+  max-width: 80%;
+}
+
+/* line 18, C:/wamp64/www/cda35.reboot/assets/css/sass/_news.scss */
+.container-form {
+  border: 1px solid black;
+  padding: 16px;
+}
+
 /*# sourceMappingURL=main.css.map */

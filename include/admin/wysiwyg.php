@@ -1,4 +1,4 @@
-<section id="newarticle" class="row" class="trumbowyg">
+<section id="newarticle" class="row" >
     <div class="container">
         <form class="contact-form" action="./index.php?page=admin_add_news" method="post">
             <input type="hidden" name="formulaire" value="add_news"/>

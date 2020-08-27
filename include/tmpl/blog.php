@@ -6,25 +6,31 @@
                 <?php
                 include('./lib/post_news.php');
                 foreach ($ar_News as $key => $tb_news) {
-                    if ($tb_news['Diffusion_Level'] == 1) {
-                        echo'
+                    if ($tb_news['Diffusion_Level'] == 1) {?>
                             <div class="blog-post">
-                            <img src="img/news/1.jpg" alt="">
-                            <div class="blog-date">' . $tb_news['DPubli'] . '</div>
-                            <h2 class="blog-title">' . $tb_news['Titre'] . '</h2>
+                            <img src="./img/img/galerie/gallery1.png" alt="">
+                            <div class="blog-date"><?php echo $tb_news['DPubli'] ?></div>
+                            <h2 class="blog-title"><?php echo $tb_news['Titre'] ?></h2>
                             <div class="blog-metas">
-                                <div class="blog-meta">By Mark Smith </div>
-                                <div class="blog-meta">In Loans</div>
-                                <div class="blog-meta"> 3 comments</div>
+                                <div class="blog-meta">Organisateur </div>
+                        <?php if($user_level == 2){ ?>
+                                <div class='sb-widget'>
+                                    <div class='tags'>
+
+                                         <!-- TODO : Ajouter l'id :   -->
+                                        <button class='link' data-id='<?php echo $tb_news['IdNouvelle'];?>'>Modifier</button>
+                                        
+                                    </div>
+                                </div>
+                        <?php };?>
                             </div>
-                            <p>' . $tb_news['Intro'] . '</p>
+                            <p><?php echo $tb_news['Intro'] ?></p>
                             <a href="#" class="readmore">Read More <img src="img/arrow.png" alt=""></a>
                         </div> 
-                        ';
-                    }
+                    <?php }
                 }
                 ?>
-
+<!--
                 <div class="blog-post">
                     <img src="img/news/1.jpg" alt="">
                     <div class="blog-date">Apr 08, 2019</div>
@@ -65,6 +71,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem por incididunt ut labore et dolore mag na aliqua.  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse potenti.</p>
                     <a href="#" class="readmore">Read More <img src="img/arrow.png" alt=""></a>
                 </div>
+                -->
+
                 <div class="site-pagination">
                     <a href="#" class="active">01.</a>
                     <a href="#">02.</a>
@@ -118,3 +126,40 @@
         </div>
     </div>
 </section>
+
+    <div id='modal_AddNews'>
+    <div  class="container" >
+        <form  class="contact-form" action="./index.php?page=admin_add_news" method="post">
+            <input type="hidden" name="formulaire" value="add_news"/>
+            <p id='#modal_AddNews' class="TitleForm" >Formulaire d'ajouter une nouvelle : </p>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-box user-icon mb-30">
+                        <label>Entrer un titre de la nouvelle : </label>
+                        <input type="text" id="title" name="title" value="" placeholder="Un titre" />
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-box user-icon mb-30">
+                        <label>Une courte introduction : </label>
+                        <input type="text" id="intro" name="intro" value="" placeholder="Une introduction..." />
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div  class="form-box mb-30">
+                        <label>Texte de la nouvelle : </label>
+                        <textarea type="text" id="description" name="description" value="" placeholder="Votre texte" > </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <button id="" class="btn btn-primary" type="">Nothing</button>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <button id="addNews" class="btn btn-primary" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>

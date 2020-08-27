@@ -206,6 +206,20 @@ $(window).on('load', function() {
 		});
 	});
 
+	//Tentative une modale pour modifier la news :
+	//Gestion du bouton pour afficher cette modale :
+
+
+
+	//Tentatiove Ajax modifier la news :
+	$('.link').on('click', (event) => {
+		console.log("J'ai cliqué que le bouton");
+		var idNews = event.target.getAttribute('data-id');
+		console.log ("Mon id news =" + idNews);
+		$('#modal_AddNews').show();
+		}
+	);
+
 
 
 })(jQuery);

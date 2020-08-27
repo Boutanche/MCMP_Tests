@@ -173,7 +173,7 @@ input[type=checkbox] {
 
 /* line 4, C:/wamp64/www/cda35.reboot/assets/css/sass/_news.scss */
 #modal_AddNews .container {
-  background-color: red;
+  background-color: whitesmoke;
   margin-top: 5vh;
   margin-left: 10%;
   height: 90vh;

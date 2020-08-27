@@ -129,9 +129,9 @@
 
     <div id='modal_AddNews'>
     <div  class="container" >
-        <form  class="contact-form" action="./index.php?page=admin_add_news" method="post">
+        <form  class="contact-form" action="./index.php?page=info" method="post">
             <input type="hidden" name="formulaire" value="add_news"/>
-            <p id='#modal_AddNews' class="TitleForm" >Formulaire d'ajouter une nouvelle : </p>
+            <h2 id='#modal_AddNews' class="TitleForm" >Formulaire modifier une nouvelle : </h2>
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="form-box user-icon mb-30">
@@ -154,10 +154,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4">
-                    <button id="" class="btn btn-primary" type="">Nothing</button>
+                    <button id="Fermer" class="btn btn-danger" type="">Fermer</button>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <button id="addNews" class="btn btn-primary" type="submit">Envoyer</button>
+                    <button id="modify_News" class="btn btn-success" type="submit">Envoyer</button>
                 </div>
             </div>
         </form>

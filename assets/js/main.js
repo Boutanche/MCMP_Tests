@@ -185,6 +185,8 @@ $(window).on('load', function() {
 	});
 	$('.close').on("click", function () {
 		$('#myModal').hide();
+		$('#modifNews_close').hide();
+
 	});
 
 	$('#addNews').on('click',function() {

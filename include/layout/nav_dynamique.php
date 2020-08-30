@@ -23,12 +23,17 @@
 <div id="login_mod">
     <div class="col-lg-6 modal-content" id="myModal">
         <form class="hero-form" action="./index.php" method="post">
-            <input type="hidden" name="formulaire" value="log"/>
             <p><span class="close">&times;</span></p>
-            <input type="text" id="login" name="login" placeholder="Login">
-            <input type="text" id="password" name="password" placeholder="Password">
-            <p><?php echo $message_log;?></p>
-            <button class="site-btn">Se connecter</button>
+            <fieldset>
+                <legend>Pop-in : Log</legend>
+                <input type="hidden" name="formulaire" value="log"/>
+                <label for="login">Votre Pseudo :</label>
+                <input type="text" id="login" name="login" placeholder="Login" required autofocus>
+                <label for="password">Votre mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <p><?php echo $message_log;?></p>
+                <button class="site-btn">Se connecter</button>
+            </fieldset>
         </form>
     </div>
 </div>

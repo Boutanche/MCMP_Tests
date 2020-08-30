@@ -14,9 +14,11 @@
   }
   a:hover{
     color: red;
+    background-color: black;
   }
   .btn:hover{
     color: #212529;
+
   }
 }
 .modal {
@@ -72,4 +74,6 @@
 .header-section{
   padding-left: 0px;
 }
-
+.close{
+  color: white;
+}

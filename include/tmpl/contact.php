@@ -7,9 +7,9 @@
                     <h2>Nous contacter</h2>
                     <p>Si vous le souhaitez, votre permiére participation à nos sorties se fait au tarif invitié.</p>
                     <ul>
-                        <li><i class="flaticon-032-placeholder"></i>1525  Loans Lane, Los Angeles, CA</li>
-                        <li><i class="flaticon-029-telephone-1"></i>+1 (603)535-4592</li>
-                        <li><i class="flaticon-025-arroba"></i>hello@youremail.com</li>
+                        <li><i class="flaticon-032-placeholder"></i>Adresse MCMP</li>
+                        <li><i class="flaticon-029-telephone-1"></i>Tel MCMP</li>
+                        <li><i class="flaticon-025-arroba"></i>Mail MCMP</li>
                         <li><i class="flaticon-038-wall-clock"></i>Everyday: 06:00 -22:00</li>
                     </ul>
                     <div class="social-links">
@@ -24,19 +24,22 @@
             </div>
             <div class="col-lg-8">
                 <form class="contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Your Name">
+                    <fieldset>
+                        <legend>Formulaire de contact : </legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" placeholder="Your E-mail" required>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" placeholder="Subject" required>
+                                <textarea placeholder="Your Message" required></textarea>
+                                <button class="site-btn" type="submit">Envoyer un message</button>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <input type="text" placeholder="Your E-mail">
-                        </div>
-                        <div class="col-md-12">
-                            <input type="text" placeholder="Subject">
-                            <textarea placeholder="Your Message"></textarea>
-                            <button class="site-btn">send message</button>
-                        </div>
-                    </div>
+                    </fieldset>
                 </form>
             </div>
         </div>

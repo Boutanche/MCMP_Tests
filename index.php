@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('./config/config.php');
+include ('./lib/function.php');
 include ('./lib/get_page.php');
 include ('./lib/post_log.php');
 include('./include/layout/head.php');

@@ -9,6 +9,8 @@ if(!empty($_POST)) {
                 $message_modal_admin = 'Vous devez saisir un nom et un prénom';
             }else{
                 //TODO : Vérifier unicité du login
+                //$hashed_password = My_Crypt($_POST["password"]);
+                $hash_pass = password_hash($_POST["user_password"], PASSWORD_DEFAULT);
                 $query = 'INSERT INTO adherent(
                         Nom,
                         Prenom,
@@ -35,7 +37,7 @@ if(!empty($_POST)) {
                         "'.$_POST["dadhesion"].'",
                         "'.$_POST["organisateur"].'",
                         "'.$_POST["login"].'",
-                        "'.$_POST["user_password"].'",
+                        "'.$hash_pass.'",
                         '.$droit_image.'
                     )';
                 echo "Query : " .$query;

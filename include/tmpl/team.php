@@ -6,7 +6,7 @@
             <div class="col-lg-6 col-md-9 col-sm-9">
                 <div class="section-tittle">
                     <span>Nos Membres</span>
-                    <h2>Les plus excpérimentés à votre service</h2>
+                    <h2>Les membres à votre service</h2>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3">
@@ -49,7 +49,6 @@
             <?php
             }
             ?>
-
         </div>
     </div>
 </div>

@@ -222,6 +222,14 @@ $(window).on('load', function() {
 		}
 	);
 
+	//Téleverser une image pour les membres :
+	$('#fichierImage').addEventListener('change', function () {
+		console.log(this.files[O].name);
+		console.log(this.files[O].size);
+		console.log(this.files[O].type);
+		console.log(this.files[O].lastModified);
+	})
+
 
 
 })(jQuery);

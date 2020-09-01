@@ -11,6 +11,7 @@ if(!empty($_POST)) {
                 //TODO : Vérifier unicité du login
                 //$hashed_password = My_Crypt($_POST["password"]);
                 $hash_pass = password_hash($_POST["user_password"], PASSWORD_DEFAULT);
+                //TODO : Gestion UPLOAD FILES
                 $query = 'INSERT INTO adherent(
                         Nom,
                         Prenom,
@@ -25,6 +26,7 @@ if(!empty($_POST)) {
                         Login,
                         Password,
                         Droit_image
+                        
                     ) VALUE (
                         "'.$_POST["nom"].'",
                         "'.$_POST["prenom"].'",
@@ -39,6 +41,7 @@ if(!empty($_POST)) {
                         "'.$_POST["login"].'",
                         "'.$hash_pass.'",
                         '.$droit_image.'
+                        
                     )';
                 echo "Query : " .$query;
                 echo "Message pour voir ".$message_modal_admin;

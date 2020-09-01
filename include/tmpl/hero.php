@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="hero-slider owl-carousel">
-        <div class="hs-item set-bg" data-setbg="./img/img/hero/h1_moto001"></div>
+        <div class="hs-item set-bg" data-setbg="./img/img/hero/h1_moto001.png"></div>
     </div>
 </section>
 <!-- Hero Section end -->

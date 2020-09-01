@@ -1,8 +1,8 @@
         <!-- Footer Section -->
         <footer class="footer-section">
             <div class="container">
-                <a href="index.html" class="footer-logo">
-                    <img src="img/logo.png" alt="">
+                <a href="index.php" class="footer-logo">
+                    <img src="./img/img/logo/logo2_footer.png" alt="">
                 </a>
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">

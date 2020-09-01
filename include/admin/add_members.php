@@ -1,4 +1,3 @@
-
 <div class="col-lg-8" id="add_member">
     <form class="contact-form" action="./index.php?page=admin_add_members" method="post">
         <input type="hidden" name="formulaire" value="add_member"/>
@@ -61,7 +60,14 @@
             </div>
             <div class="col-lg-6">
                 <div  class="form-box mb-30">
+                    <label>Date d'adhésion : </label>
                     <input type="date" id="dadhe" name="dadhesion" value="" placeholder="1980-01-22"/>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div  class="form-box mb-30">
+                    <label>Téléverser une image : </label>
+                    <input type="file" id="fichierImage" name="avatar"/>
                 </div>
             </div>
         </div>

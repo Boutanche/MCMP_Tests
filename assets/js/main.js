@@ -146,12 +146,8 @@ $(window).on('load', function() {
 
 	});
 
-
-
 	//Tentative une modale pour modifier la news :
 	//Gestion du bouton pour afficher cette modale :
-
-
 
 	//Tentatiove Ajax modifier la news :
 	$('.link_modify').on('click', (event) => {
@@ -165,20 +161,44 @@ $(window).on('load', function() {
 	//Une modale Read_More :
 	$('.readmore').on('click', (event) =>{
 		console.log("J'ai cliqué sur readmore");
-		var idNews = event.target.getAttribute('data_id');
-		console.log("Mon id news =" + idNews);
+		var idNews = event.target.getAttribute('data-id');
+		console.log("Mon id news = " + idNews);
 		$("#modal_Readmore").show();
-		}
-	);
+		var call_ajaxGetIDNews = $.ajax({
+			url: "./lib/methode_ajax_old.php",
+			method: "GET",
+			data : {id : idNews},
+			dataType: "Json"
+			}
+		);
+		call_ajaxGetIDNews.done(function (data) {
+			console.log ("A fonctionné.");
+			console.log(data.IdNouvelle);
+
+		})
+		call_ajaxGetIDNews.fail(function(jqXHR, textStatus){
+			console.log("A raté.");
+			console.log("Failed Request : " + textStatus);
+
+
+		});
+	});
+	//Récupérer en Ajax l'ID de la nouvelle pour l'afficher dans la modale :
+
+
+
+
+
 
 	//Téleverser une image pour les membres :
+	/*
 	$('#fichierImage').addEventListener('change', function () {
 		console.log(this.files[O].name);
 		console.log(this.files[O].size);
 		console.log(this.files[O].type);
 		console.log(this.files[O].lastModified);
 	})
-
+*/
 
 
 
@@ -233,7 +253,7 @@ $('#trumbowig-envoyer').on("click",function(){
 		console.log('Click is OK !')
 		var call_ajax = $.ajax(
 			{
-				url: "./lib/methode_ajax.php",
+				url: "./lib/methode_ajax_old.php",
 				method: "POST",
 				data: { informations : 1, title:title, description : description },
 				dataType: "json" //ou JSON

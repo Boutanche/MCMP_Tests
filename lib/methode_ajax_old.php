@@ -2,16 +2,17 @@
 include_once('../config/config.php');
 $ThisNewsJson = array();
 if (!empty($_GET)) {
-    if (isset($_GET['id_news'])) {
+    if (isset($_GET['id'])) {
         //Pourquoi quand on utilise ajax il faut rebalancer le cofig ?
         //include_once('./config/config.php');
         $req_ThisNews = $bdd->prepare('SELECT * FROM nouvelle WHERE IdNouvelle = :id');
         $req_ThisNews->execute(array('id' => $_GET['id']));
         $ThisNews = $req_ThisNews->fetch();
         $ThisNewsJson = json_encode($ThisNews);
-    } else {
+        echo($ThisNewsJson);
+    }else{
+        echo "{'e' : 'erreur id est vide'}";
     }
-    echo($ThisNewsJson);
 }
 
 

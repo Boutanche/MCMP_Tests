@@ -155,6 +155,37 @@ $(window).on('load', function() {
 		var idNews = event.target.getAttribute('data-id');
 		console.log ("Mon id news =" + idNews);
 		$('#modal_AddNews').show();
+		var call_ajaxGetIDNews = $.ajax({
+				url: "./lib/methode_ajax_old.php",
+				method: "GET",
+				data : {id : idNews},
+				dataType: "Json"
+			}
+		);
+		call_ajaxGetIDNews.done(function (data) {
+			console.log ("A fonctionné.");
+			console.log(data.IdNouvelle);
+			$("#newsId").html(data.IdNouvelle);
+			$("#newsTitle").html(
+				`
+                <input type="text" name="title" value="${data.Titre}" placeholder="${data.Titre}" />
+				`
+			);
+			$("#newsIntro").html(
+				`
+                <input type="text" name="intro" value="${data.Intro}" placeholder="${data.Intro}" />
+				`
+			);
+			$("#newsTexte").html(
+				`
+				<textarea type="text" name="description" value="${data.Texte}" placeholder="${data.Texte}" > ${data.Texte}</textarea>
+				`
+			);
+		})
+		call_ajaxGetIDNews.fail(function(jqXHR, textStatus){
+			console.log("A raté.");
+			console.log("Failed Request : " + textStatus);
+		});
 		}
 	);
 
@@ -174,13 +205,14 @@ $(window).on('load', function() {
 		call_ajaxGetIDNews.done(function (data) {
 			console.log ("A fonctionné.");
 			console.log(data.IdNouvelle);
-
+			$("#newsTitre").html(data.Titre);
+			$("#newsTroin").html(data.Intro);
+			$("#newsTetex").html(data.Texte);
+			$("#newsDPubli").html(data.DPubli);
 		})
 		call_ajaxGetIDNews.fail(function(jqXHR, textStatus){
 			console.log("A raté.");
 			console.log("Failed Request : " + textStatus);
-
-
 		});
 	});
 	//Récupérer en Ajax l'ID de la nouvelle pour l'afficher dans la modale :

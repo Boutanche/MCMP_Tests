@@ -137,35 +137,83 @@ $(window).on('load', function() {
 		My Js :
 	 -----------*/
 
-
-	// Wysiwyg  :
-	/*
-	if($('#trumbowyg').length){
-		console.log('WYSIWYG is ready !');
-		var title = $('input[name=title]').val();
-		var description = $('#trumbowyg').trumbowyg;
-		console.log ('Tu me dis rien ok');
-		console.log(title);
-		console.log(description);
-		('Tu devrais pas me dire un truc quand bouton envoyé ?')
-
-
-
-		$('#trumbowyg').trumbowyg({
-
-
-		});
-	}
-	$('#trumbowig-envoyer').on("click",function(){
-		console.log('Je suis là');
-		$('#newarticle').prepend('<div class="col-12 blue">' + $('#wysiwyg .ql-editor').html() + '</div>');
+	$('.myBtn').on("click", function () {
+		$('#myModal').show();
+	});
+	$('.close').on("click", function () {
+		$('#myModal').hide();
+		$('#modifNews_close').hide();
 
 	});
 
-	 */
 
 
-	// Modal :
+	//Tentative une modale pour modifier la news :
+	//Gestion du bouton pour afficher cette modale :
+
+
+
+	//Tentatiove Ajax modifier la news :
+	$('.link_modify').on('click', (event) => {
+		console.log("J'ai cliqué que le bouton");
+		var idNews = event.target.getAttribute('data-id');
+		console.log ("Mon id news =" + idNews);
+		$('#modal_AddNews').show();
+		}
+	);
+
+	//Une modale Read_More :
+	$('.readmore').on('click', (event) =>{
+		console.log("J'ai cliqué sur readmore");
+		var idNews = event.target.getAttribute('data_id');
+		console.log("Mon id news =" + idNews);
+		$("#modal_Readmore").show();
+		}
+	);
+
+	//Téleverser une image pour les membres :
+	$('#fichierImage').addEventListener('change', function () {
+		console.log(this.files[O].name);
+		console.log(this.files[O].size);
+		console.log(this.files[O].type);
+		console.log(this.files[O].lastModified);
+	})
+
+
+
+
+})(jQuery);
+
+
+
+// Wysiwyg  :
+/*
+if($('#trumbowyg').length){
+    console.log('WYSIWYG is ready !');
+    var title = $('input[name=title]').val();
+    var description = $('#trumbowyg').trumbowyg;
+    console.log ('Tu me dis rien ok');
+    console.log(title);
+    console.log(description);
+    ('Tu devrais pas me dire un truc quand bouton envoyé ?')
+
+
+
+    $('#trumbowyg').trumbowyg({
+
+
+    });
+}
+$('#trumbowig-envoyer').on("click",function(){
+    console.log('Je suis là');
+    $('#newarticle').prepend('<div class="col-12 blue">' + $('#wysiwyg .ql-editor').html() + '</div>');
+
+});
+
+ */
+
+
+// Modal :
 /*
 	if($('#login_mod')){
 		var modal = $("myModal");
@@ -179,17 +227,9 @@ $(window).on('load', function() {
 			modal.style.display = "none";
 		}
 	};
-*/
-	$('.myBtn').on("click", function () {
-		$('#myModal').show();
-	});
-	$('.close').on("click", function () {
-		$('#myModal').hide();
-		$('#modifNews_close').hide();
 
-	});
-
-	$('#addNews').on('click',function() {
+	//Mais ça sert à rien ça pour le moment  :::
+		$('#addNews').on('click',function() {
 		console.log('Click is OK !')
 		var call_ajax = $.ajax(
 			{
@@ -208,29 +248,4 @@ $(window).on('load', function() {
 		});
 	});
 
-	//Tentative une modale pour modifier la news :
-	//Gestion du bouton pour afficher cette modale :
-
-
-
-	//Tentatiove Ajax modifier la news :
-	$('.link').on('click', (event) => {
-		console.log("J'ai cliqué que le bouton");
-		var idNews = event.target.getAttribute('data-id');
-		console.log ("Mon id news =" + idNews);
-		$('#modal_AddNews').show();
-		}
-	);
-
-	//Téleverser une image pour les membres :
-	$('#fichierImage').addEventListener('change', function () {
-		console.log(this.files[O].name);
-		console.log(this.files[O].size);
-		console.log(this.files[O].type);
-		console.log(this.files[O].lastModified);
-	})
-
-
-
-})(jQuery);
-
+*/

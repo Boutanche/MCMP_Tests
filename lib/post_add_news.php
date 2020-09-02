@@ -17,12 +17,12 @@ if(!empty($_POST)) {
                     'diffusion' => 1,
                     'image' => null ));
 
-               echo "Résultat de la requête  : ".var_dump($result)."<br>";
+               //echo "Résultat de la requête  : ".var_dump($result)."<br>";
             }catch(Exception $e) {
                 echo $e;
             }
 
-            echo var_dump($req_insertNews);
+            //echo var_dump($req_insertNews);
         }
 
     }

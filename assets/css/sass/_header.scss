@@ -6,14 +6,14 @@
 }
 #navigation {
   a.active{
-    color: red;
+    color: orangered;
     text-decoration: underline;
   }
   a{
     color: whitesmoke;
   }
   a:hover{
-    color: red;
+    color: orangered;
     background-color: black;
   }
   .btn:hover{
@@ -36,10 +36,10 @@
   border-color: #4e555b;
   }
 .btn-modal:hover{
-  background-color: #c82333;
+  background-color: orangered;
 }
 .btn-modal:active {
-  background-color: #c82333;
+  background-color: orangered;
 }
 #modal_log{
   padding-top: 10px;
@@ -76,4 +76,23 @@
 }
 .close{
   color: white;
+}
+.close:hover{
+  color: #c6c8ca;
+}
+
+.site-btn:hover{
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 188px;
+  padding: 22px 35px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: #fff;
+  color:  #f43f00;
+  line-height: normal;
+  cursor: pointer;
+  text-align: center;
 }

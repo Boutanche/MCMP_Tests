@@ -23,7 +23,9 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form class="contact-form">
+                <!-- START : Formulaire SMTP -->
+                <form class="contact-form" action="./index.php?page=admin_add_news" method="post">
+
                     <fieldset>
                         <legend>Formulaire de contact : </legend>
                         <div class="row">

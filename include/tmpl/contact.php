@@ -10,7 +10,7 @@
                         <li><i class="flaticon-032-placeholder"></i>Adresse MCMP</li>
                         <li><i class="flaticon-029-telephone-1"></i>Tel MCMP</li>
                         <li><i class="flaticon-025-arroba"></i>Mail MCMP</li>
-                        <li><i class="flaticon-038-wall-clock"></i>Everyday: 06:00 -22:00</li>
+                        <li><i class="flaticon-038-wall-clock"></i>Tous les jours : 06:00-22:00</li>
                     </ul>
                     <div class="social-links">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -27,17 +27,17 @@
                 <form class="contact-form" action="./index.php?page=admin_add_news" method="post">
 
                     <fieldset>
-                        <legend>Formulaire de contact : </legend>
+                        <legend> Formulaire de contact : </legend>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" placeholder="Votre Nom" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Your E-mail" required>
+                                <input type="email" placeholder="Votre E-mail" required>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Subject" required>
-                                <textarea placeholder="Your Message" required></textarea>
+                                <input type="text" placeholder="Objet de votre demande" required>
+                                <textarea placeholder="Votre message" required></textarea>
                                 <button class="site-btn" type="submit">Envoyer un message</button>
                             </div>
                         </div>

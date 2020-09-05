@@ -25,7 +25,7 @@
         <form class="hero-form" action="./index.php" method="post">
             <p><span class="close">&times;</span></p>
             <fieldset>
-                <legend>Pop-in : Log</legend>
+                <legend>Formulaire de connexion</legend>
                 <input type="hidden" name="formulaire" value="log"/>
                 <label for="login">Votre Pseudo :</label>
                 <input type="text" id="login" name="login" placeholder="Login" required autofocus>

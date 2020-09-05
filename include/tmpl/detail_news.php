@@ -117,7 +117,8 @@
                     </div>
                 </div>
             </div>
-            <!-- TODO : Quand on est pas connecté on ne peut pas poster de photo -->
+            <!-- Vérification pour autorisation de poster une Photo sur la news : -->
+            <?php if ($user_level > 0) {?>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">
                     <aside class="single_sidebar_widget search_widget">
@@ -154,6 +155,7 @@
                     </aside>
                 </div>
             </div>
+            <?php } ?>
         </div>
         <form action="./index.php?page=info" method="post">
             <div class="row">

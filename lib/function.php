@@ -17,24 +17,24 @@ function My_Crypt($password){
 }
 
 //
-function My_Mail(){
+function Mi_Mail($Omail,$name,$objet,$message){
     $mail = new PHPMailer(true);                                      // Passing `true` enables exceptions
     try {
         //Server settings
         $mail->SMTPDebug = 2;                                                  // Enable verbose debug output
         $mail->isSMTP();                                                       // Set mailer to use SMTP
-        $mail->Host = 'in-v3.mailjet.com';                                     // Specify main and backup SMTP servers
+        $mail->Host = 'smtp-relay.sendinblue.com';                                     // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                                                // Enable SMTP authentication
-        $mail->Username = '7ec368ea4654113c7062e2f3b16f7bb3';                  // SMTP username
-        $mail->Password = '7db0c1207cb076ea0b68ffe7b9ea49e5';                  // SMTP password
+        $mail->Username = 'davy.blavette@2isa.com';                  // SMTP username
+        $mail->Password = ' xsmtpsib-a8e31f4c3e068fc3ba10895b12fb9d5f2637da16cccc8d08b854895e6ae207f1-da2qWKSHcm7IxzCg';                  // SMTP password
         $mail->SMTPSecure = 'tls';                                             // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                                     // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('davy.blavette@2isa.com', 'Mailer');
+        $mail->setFrom($Omail, $name);
         $mail->addAddress('davy.blavette@2isa.com', 'Davy Blavette');     // Add a recipient
-//    $mail->addAddress('patrick.nardi@2isa.org');                                 // Name is optional
-        $mail->addReplyTo('edouard.phan@2isa.org', 'Edouard');
+        $mail->addAddress('benoit.bertrand@2isa.org');                                 // Name is optional
+        $mail->addReplyTo('no_reply@gmail.com', 'pas de reponse');
 //    $mail->addCC('jean-yves.fontenil@2isa.org');
 //    $mail->addBCC('pauline.ivaldi-rancurel@2isa.org');
 
@@ -44,8 +44,8 @@ function My_Mail(){
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = "Demande de votre mot de passe";
-        $mail->Body = 'Bonjour<br/>, veuillez me transferer votre code client ainsi que votre mot de passe <b>urgement!</b>';
+        $mail->Subject = $objet;
+        $mail->Body = $message;
 //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();

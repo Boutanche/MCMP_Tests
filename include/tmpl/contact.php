@@ -1,4 +1,5 @@
 <!-- Contact Section start -->
+<?php include './lib/mail.php';?>
 <section class="contact-section spad">
     <div class="container">
         <div class="row">
@@ -24,20 +25,25 @@
             </div>
             <div class="col-lg-8">
                 <!-- START : Formulaire SMTP -->
-                <form class="contact-form" action="./index.php?page=admin_add_news" method="post">
+                <form class="contact-form" action="./index.php?page=services" method="post">
+                    <input type="hidden" name="formulaire" value="form_contact">
 
                     <fieldset>
                         <legend> Formulaire de contact : </legend>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Votre Nom" required>
+                                <label for="user_name">Nom :</label>
+                                <input type="text" placeholder="Votre Nom" name="user_name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Votre E-mail" required>
+                                <label for="user_mail">E-Mail</label>
+                                <input type="email" placeholder="Votre E-mail" name="user_mail" required>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Objet de votre demande" required>
-                                <textarea placeholder="Votre message" required></textarea>
+                                <label for="user_object">Objet :</label>
+                                <input type="text" placeholder="Objet de votre demande" name="user_object" required>
+                                <label for="user_message">Message :</label>
+                                <textarea placeholder="Votre message" required name="user_message"></textarea>
                                 <button class="site-btn" type="submit">Envoyer un message</button>
                             </div>
                         </div>

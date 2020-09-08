@@ -209,6 +209,7 @@ $(window).on('load', function() {
 			$("#newsTroin").html(data.Intro);
 			$("#newsTetex").html(data.Texte);
 			$("#newsDPubli").html(data.DPubli);
+			$("#newsfrId").val(data.IdNouvelle);
 		})
 		call_ajaxGetIDNews.fail(function(jqXHR, textStatus){
 			console.log("A raté.");
@@ -301,3 +302,10 @@ $('#trumbowig-envoyer').on("click",function(){
 	});
 
 */
+// 12 Pop Up Video
+var popUp = $('.popup-video');
+if(popUp.length){
+	popUp.magnificPopup({
+		type: 'iframe'
+	});
+}

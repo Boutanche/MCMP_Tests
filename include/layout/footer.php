@@ -71,6 +71,7 @@
         <script src="./assets/js/bootstrap.min.js"></script>
         <script src="./assets/js/jquery.slicknav.min.js"></script>
         <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
         <script src="./assets/js/jquery-ui.min.js"></script>
         <script src="./vendor/Trumbowyg-master/dist/trumbowyg.min.js"></script>
         <script src="./vendor/summernote-0.8.18-dist/summernote.min.js"></script>

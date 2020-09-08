@@ -10,15 +10,32 @@
   a:hover{
     color: orangered;
   }
+  /*
+  //TODO un petit effet autour du bouton Play Vidéo :
+  a:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    border-radius: inherit;
+    border: 1px solid #ff1313;
+    -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+    animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+  }
+   */
 }
+
 .hs-text {
   h2 {
-    font-family: "Ink Free";
+    font-family: "Teko";
   }
   p{
     color: orangered;
     font-size: 20px;
-    font-family: Impact;
+    font-family: Barlow;
   }
 }
 .site-btn.sb-dark:hover {

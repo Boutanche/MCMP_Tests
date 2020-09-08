@@ -2,12 +2,12 @@
     <?php
     include('./lib/session_destroy.php');
     foreach ($ar_page as $key => $tb_page){
-        if ($tb_page['key_file'] == $ar_page) {
+        if ($tb_page['KeyFile'] == $ar_page) {
             $active ='active';
         }
         else {$active ='';}
-        if($tb_page['navBarMenu'] == 1){
-            echo '<li><a  class="'.$active.'" href="./index.php?page='.$tb_page['key_file'].'">'.$tb_page['menu'].'</a></li>';
+        if($tb_page['Navbar'] == 1){
+            echo '<li><a  class="'.$active.'" href="page-'.$tb_page['KeyFile'].'">'.$tb_page['Menu'].'</a></li>';
         }
     }
     ?>

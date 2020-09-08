@@ -127,6 +127,7 @@
                             <!-- START : Formulaire : Poster une photo sous un article : -->
                             <form class="form-contact comment_form" action="./index.php?page=info" id="Post_Img_Form" enctype="multipart/form-data" method="post">
                                 <input type="hidden" name="post_img" value="add_img"/>
+                                <input type="hidden" name="news_id" value="" id="newsfrId"/>
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">

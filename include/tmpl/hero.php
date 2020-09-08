@@ -14,8 +14,10 @@
     <div class="hero-slider owl-carousel">
         <div class="hs-item set-bg" data-setbg="./img/img/hero/h1_moto001.png"></div>
     </div>
+    <!-- Video icon -->
     <div class="video-icon">
         <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=28pwcPt-8FM" target="_blank"><i class="fa fa-play-circle-o"></i></a>
     </div>
 </section>
 <!-- Hero Section end -->
+

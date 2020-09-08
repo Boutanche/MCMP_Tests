@@ -18,18 +18,15 @@ if (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
                 //TODO : Upload OK
                 //TODO : BUG REQUETE Ne part pas jusqu'à la BDD.
                 $req_insertimg_news = $bdd->prepare('INSERT INTO photo (Titre, DPhoto, Fichier, IdAdherent, IdActivite, Code) VALUES ( :titre, :dphoto, :fichier, :idadherent, :idactivite, :code)');
-                try {
+
                     $result = $req_insertimg_news->execute(array(
                         'titre' => $_POST['name_img'],
                         'dphoto' => $today,
                         'fichier' => $upload_news_img,
                         'idadherent' => $_SESSION['id_adherent'],
-                        'idactivite' => $tb_news['IdNouvelle'],
+                        'idactivite' => 12,//$_POST['news_id'] TODO : NE PAS CONFONDRE ACTIVITE ET LES NEWS : ,
                         'code' => 1 ));
-                        echo "Résultat de la requête  : ".var_dump($result)."<br>";
-                }catch(Exception $e) {
-                    echo $e;
-                }
+                        //echo "Résultat de la requête  : ".var_dump($result)."<br>";
             }else{
                 //fichier trop grand.
             }

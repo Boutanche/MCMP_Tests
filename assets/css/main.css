@@ -198,6 +198,24 @@ v
   margin-top: 1.5rem;
 }
 
+/* line 4, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.container {
+  margin-top: 5%;
+}
+
+/* line 7, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.TitleForm {
+  font-size: 30px;
+  color: orangered;
+  font-family: Teko;
+}
+
+/* line 12, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+legend {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
 /* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
 #add_member {
   padding-bottom: 5rem;

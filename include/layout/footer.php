@@ -7,15 +7,11 @@
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="footer-widget">
-                            <?php if ($user_level == 2){
+                            <?php //if ($user_level == 2){ ?>
                                 echo ('<h2>Administration</h2>
                                 <ul>
-                                    <li><a href="./index.php?page=admin_add_members">Gestion des Membres</a></li>
-                                    <li><a href="./index.php?page=admin_add_activity">Gestion des Activités</a></li>
-                                    <li><a href="./index.php?page=admin_add_news">Gestion des Nouvelles</a></li>
-                                    <li><a href="#">Home improvement loans</a></li>
-                                    <li><a href="#"> Wedding loans</a></li>
-                                    <li><a href="#">Innovative Finance ISA</a></li>
+                                    <li><a href="./admin">Temp Zone Add Member</a></li>
+                                    <li><a href="./page-admin">Administration</a></li>
                                 </ul>');
                             }?>
                         </div>

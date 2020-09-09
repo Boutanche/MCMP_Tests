@@ -1,9 +1,9 @@
+<!--TODO : DELETE THIS -->
 <body>
-<!-- Page Preloder
+<!-- Page Preloder -->
 <div id="preloder">
     <div class="loader"></div>
 </div>
--->
 
 <!-- Header Section -->
 <header class="header-section">
@@ -11,7 +11,7 @@
         <img src="./img/img/logo/logo.png" alt="logo du site MCMP">
     </a>
     <nav class="header-nav">
-        <?php include('./include/layout/nav_dynamique.php');?>
+        <?php include('./include/page/module/navDynamique.php');?>
     </nav>
 </header>
 <!-- Header Section end -->

@@ -20,7 +20,6 @@ class Adherent
     {
         $this->hydrate($data);
     }
-
     public function hydrate(Array $data)
     {
         foreach ($data as $key => $value){

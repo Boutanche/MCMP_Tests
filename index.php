@@ -1,11 +1,11 @@
 <?php
 session_start();
-
 //Cookie : Session : Pour Log.
 //ENTRER SUR LE SITE DU MCMP
 //CONFIGURATION :
 include ('./config/config.php');
 include ('./lib/get/index.php');
+include ('./lib/post/index.php');
 //include ('./lib/function.php');
 //include ('./lib/get_page.php');
 //include ('./lib/post_log.php');

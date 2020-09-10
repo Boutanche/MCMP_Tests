@@ -193,6 +193,16 @@ v
   text-align: center;
 }
 
+/* line 103, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.container-fluid {
+  padding-left: 10%;
+}
+
+/* line 105, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.container-fluid h1 {
+  font-family: Teko;
+}
+
 /* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
 #members {
   margin-top: 1.5rem;

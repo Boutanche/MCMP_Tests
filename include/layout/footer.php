@@ -10,7 +10,6 @@
                             <?php //if ($user_level == 2){ ?>
                                 echo ('<h2>Administration</h2>
                                 <ul>
-                                    <li><a href="./admin">Temp Zone Add Member</a></li>
                                     <li><a href="./page-admin">Administration</a></li>
                                 </ul>');
                             }?>

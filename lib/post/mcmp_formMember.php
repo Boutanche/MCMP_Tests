@@ -26,7 +26,7 @@ if(empty($_POST["nom"]) || empty($_POST["prenom"])){
     if (isset($_POST["login"])){
         $messageAdmin_FormMember = "Login_ OK ";
         //vérifier validiter du password
-        //TODO : Augmanter la sécurité en augmentant la difficulté du mp:
+        //TODO : Augmenter la sécurité en augmentant la difficulté du mp:
         if($_POST['user_password'] == $_POST['confirm_password']){
             $adherent = new Adherent($ar_adherent);
             $adherent->hydrate($ar_adherent);

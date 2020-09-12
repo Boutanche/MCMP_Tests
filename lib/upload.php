@@ -30,7 +30,6 @@ if (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
             }else{
                 //fichier trop grand.
             }
-
         }else{
             //Extension non valide.
         }

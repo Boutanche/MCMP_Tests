@@ -1,16 +1,16 @@
 <?php
 class Adherent
 {
-    private $_id ;
+    private $_idAdherent ;
     private $_nom ;
     private $_prenom ;
-    private $_bornDate ;
+    private $_dNaiss ;
     private $_addr1 ;
-    private $_cdpost ;
+    private $_cdPost ;
     private $_ville ;
     private $_email ;
     private $_tel;
-    private $_dadhesion ;
+    private $_dAdhesion ;
     private $_login ;
     private $_password ;
     private $_idPhoto ;
@@ -29,10 +29,19 @@ class Adherent
             }
         }
     }
-    //TODO : Une List de Getters
-    public function getId()
+    public function dehydrate(Adherent $adherent)
     {
-        return $this->_id;
+        foreach ($adherent as $key => $value){
+            $methode = 'get'.ucfirst($key);
+            if(method_exists($this, $methode)){
+                $this->$methode($value);
+            }
+        }
+    }
+    //TODO : Une List de Getters
+    public function getIdAdherent()
+    {
+        return $this->_idAdherent;
     }
     public function getNom()
     {
@@ -42,9 +51,9 @@ class Adherent
     {
         return $this->_prenom;
     }
-    public function getBornDate()
+    public function getDNaiss()
     {
-        return $this->_bornDate;
+        return $this->_dNaiss;
     }
     public function getAddr1()
     {
@@ -52,7 +61,7 @@ class Adherent
     }
     public function getCdpost()
     {
-        return $this->_cdpost;
+        return $this->_cdPost;
     }
     public function getVille()
     {
@@ -68,7 +77,7 @@ class Adherent
     }
     public function getDadhesion()
     {
-        return $this->_dadhesion;
+        return $this->_dAdhesion;
     }
     public function getLogin()
     {
@@ -89,7 +98,7 @@ class Adherent
     //TODO : Une List de Setters
     public function setId($id): void
     {
-        $this->_id = $id;
+        $this->_idAdherent= $id;
     }
     public function setNom($nom): void
     {
@@ -101,7 +110,7 @@ class Adherent
     }
     public function setBornDate($bornDate): void
     {
-        $this->_bornDate = $bornDate;
+        $this->_dNaiss = $bornDate;
     }
     public function setAddr1($addr1): void
     {
@@ -109,7 +118,7 @@ class Adherent
     }
     public function setCdpost($cdpost): void
     {
-        $this->_cdpost = $cdpost;
+        $this->_cdPost = $cdpost;
     }
     public function setVille($ville): void
     {
@@ -125,7 +134,7 @@ class Adherent
     }
     public function setDadhesion($dadhesion): void
     {
-        $this->_dadhesion = $dadhesion;
+        $this->_dAdhesion = $dadhesion;
     }
     public function setLogin($login): void
     {

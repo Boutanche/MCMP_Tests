@@ -16,10 +16,10 @@ class AdherentDAO
             INSERT INTO mcmp_adherent (IdAdherent, Nom, Prenom, DNaiss, Addr1, CdPost, Ville, Email, Tel, DAdhesion, Login, Password, IdRole)
             VALUES(:id,:nom, :prenom, :dnaiss, :addr1, :cdpost, :ville, :email, :tel, :dadhesion, :login, :password, :idrole)');
         //requête insert :
-        $req_InsertAdh->bindValue(':id', $adherent->getId());
+        $req_InsertAdh->bindValue(':id', $adherent->getIdAdherent());
         $req_InsertAdh->bindValue(':nom', $adherent->getNom());
         $req_InsertAdh->bindValue(':prenom', $adherent->getPrenom());
-        $req_InsertAdh->bindValue(':dnaiss', $adherent->getBornDate());
+        $req_InsertAdh->bindValue(':dnaiss', $adherent->getDNaiss());
         $req_InsertAdh->bindValue(':addr1', $adherent->getAddr1());
         $req_InsertAdh->bindValue(':cdpost', $adherent->getCdpost());
         $req_InsertAdh->bindValue(':ville', $adherent->getVille());
@@ -35,7 +35,7 @@ class AdherentDAO
     }
     public function delete(Adherent $adherent){
         //Exécuter un delete sur un Adhérent :
-        $req_DeleteAdh = $this->_bdd->prepare('DELETE FROM mcmp_adherent WHERE IdAdherent = '.$adherent->getId());
+        $req_DeleteAdh = $this->_bdd->prepare('DELETE FROM mcmp_adherent WHERE IdAdherent = '.$adherent->getIdAdherent());
         $req_DeleteAdh->execute();
     }
     public function getByID($id){
@@ -50,13 +50,11 @@ class AdherentDAO
         $req_allAdherents->execute();
     }
     function findByLogin($login){
-        $req_FindByLog_adherent =$this->_bdd->prepare(('SELECT * FROM mcmp_adherent WHERE Login = :log'));
-        $req_FindByLog_adherent->bindValue(':log');
-
-        //$res =   $req_adherent->fetch();
-        //construct Adherent
-        //$testAdherent = new Adherent($res);
-        //return $testAdherent;
+        $ar_adherent = Array();
+        $req_FindByLog_adherent =$this->_bdd->prepare('SELECT * FROM mcmp_adherent WHERE Login = :log');
+        $req_FindByLog_adherent->execute([':log' => $login]);
+        $ar_adherent = $req_FindByLog_adherent->fetch(PDO::FETCH_ASSOC);
+        return $ar_adherent;
     }
     function findById($id) {
         $adherent = null;
@@ -72,6 +70,26 @@ class AdherentDAO
         $adherent = null;
         //requete update
         return $adherent;
+    }
+    //Test si Adherent avec Login = $adherentLog existe :
+    public function exists_Log($adherentLog){
+        if (is_string($adherentLog)){
+            $req = $this->_bdd->prepare('SELECT COUNT(*) FROM mcmp_adherent WHERE Login = :Log');
+            $req->execute([':Log' => $adherentLog]);
+            return (bool) $req->fetchColumn();
+        }
+    }
+    public function thisLog_And_thisPassword($adherentLog, $adherentPass){
+        $req = $this->_bdd->prepare('SELECT COUNT(*) FROM mcmp_adherent WHERE Login = :Log AND Password = :Pass');
+        $req->execute([
+            ':Log' => $adherentLog,
+            ':Pass' => $adherentPass]);
+        return (bool) $req->fetchColumn();
+    }
+    public function ThisLog_GetPass($adherentLog){
+        $req = $this->_bdd->prepare('SELECT Password FROM mcmp_adherent WHERE Login = :Log');
+        $data = $req->execute([':Log' => $adherentLog]);
+        return $data;
     }
     public function setBdd(PDO $bdd){
         $this->_bdd = $bdd;

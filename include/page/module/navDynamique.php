@@ -26,12 +26,13 @@
             <p><span class="close">&times;</span></p>
             <fieldset>
                 <legend>Formulaire de connexion</legend>
-                <input type="hidden" name="formulaire" value="log"/>
+                <input type="hidden" name="formulaire" value="login_mcmp"/>
                 <label for="login">Votre Pseudo :</label>
-                <input type="text" id="login" name="login" placeholder="Login" required autofocus>
+                <input type="text" id="login" name="login_Log" placeholder="Login" required autofocus>
                 <label for="password">Votre mot de passe :</label>
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="password_Log" placeholder="Password" required>
                 <p><?php echo $message_log;?></p>
+                <p>Si vous n'êtes pas membre MCMP, vous inscrire en Prospect <a class="lien" href="#">: ICI :</a></p>
                 <button class="site-btn">Se connecter</button>
             </fieldset>
         </form>

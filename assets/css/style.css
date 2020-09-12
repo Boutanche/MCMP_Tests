@@ -93,12 +93,6 @@ Helper CSS
 	font-size: 36px;
 }
 
-.set-bg {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
-}
-
 .spad {
 	padding-top: 102px;
 	padding-bottom: 102px;

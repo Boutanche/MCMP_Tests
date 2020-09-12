@@ -5,7 +5,7 @@
 .video-icon {
   position: absolute;
   right: 160px;
-  top: 50%;
+  top: 80%;
   z-index: 99;
   /*
   //TODO un petit effet autour du bouton Play Vidéo :
@@ -52,6 +52,17 @@
 .site-btn.sb-dark:hover {
   background: orangered;
   color: white;
+}
+
+/* line 45, ../../wamp/www/cda35.reboot/assets/css/sass/_button.scss */
+a.site-btn:hover {
+  background: #3d3126;
+}
+
+/* line 48, ../../wamp/www/cda35.reboot/assets/css/sass/_button.scss */
+#map {
+  /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+  height: 510px;
 }
 
 /* line 3, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
@@ -203,6 +214,28 @@ v
   font-family: Teko;
 }
 
+/* line 109, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.lien {
+  color: white;
+}
+
+/* line 113, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.lien:hover {
+  color: #7abaff;
+}
+
+/* line 117, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.container-about {
+  background-color: #c6c8ca;
+  margin: 1%;
+  padding: 1%;
+}
+
+/* line 122, ../../wamp/www/cda35.reboot/assets/css/sass/_header.scss */
+.container-fluid h1 {
+  font-size: 50px;
+}
+
 /* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
 #members {
   margin-top: 1.5rem;
@@ -213,17 +246,44 @@ v
   margin-top: 5%;
 }
 
-/* line 7, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+/* line 6, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.container span {
+  color: orangered;
+}
+
+/* line 10, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
 .TitleForm {
   font-size: 30px;
   color: orangered;
   font-family: Teko;
 }
 
-/* line 12, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+/* line 15, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
 legend {
   padding-left: 10px;
   font-size: 20px;
+}
+
+/* line 19, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.vignette {
+  padding-top: 5%;
+  margin: 2%;
+  background-color: #4e555b;
+}
+
+/* line 25, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.info h3 {
+  font-family: Teko;
+}
+
+/* line 28, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.info a {
+  color: white;
+}
+
+/* line 31, ../../wamp/www/cda35.reboot/assets/css/sass/_member.scss */
+.info a:hover {
+  color: orangered;
 }
 
 /* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
@@ -272,6 +332,16 @@ input[type=checkbox] {
 /* line 29, ../../wamp/www/cda35.reboot/assets/css/sass/_query.scss */
 .col_checkbox {
   padding-right: 25rem;
+}
+
+/* line 1, ../../wamp/www/cda35.reboot/assets/css/sass/_footer.scss */
+.footer-section {
+  padding-top: 1%;
+}
+
+/* line 3, ../../wamp/www/cda35.reboot/assets/css/sass/_footer.scss */
+.footer-section .container {
+  margin-top: 1%;
 }
 
 /* line 2, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
@@ -324,6 +394,38 @@ input[type=checkbox] {
 .container-form {
   border: 1px solid black;
   padding: 16px;
+}
+
+/* line 44, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.about-text {
+  font-family: Teko;
+}
+
+/* line 46, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.about-text p {
+  font-family: Barlow;
+}
+
+/* line 51, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.feature-img .img-fluid {
+  padding-top: 1%;
+}
+
+/* line 54, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.feature-img h2 {
+  font-family: Teko;
+}
+
+/* line 57, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.feature-img .quotes {
+  color: black;
+  font-family: Teko;
+}
+
+/* line 62, ../../wamp/www/cda35.reboot/assets/css/sass/_news.scss */
+.posts-list {
+  overflow-y: auto;
+  max-height: 700px;
 }
 
 /*# sourceMappingURL=main.css.map */

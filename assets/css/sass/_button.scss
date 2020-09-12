@@ -1,7 +1,7 @@
 .video-icon{
   position:absolute;
   right:160px;
-  top:50%;
+  top:80%;
   z-index: 99;
   a{
     color: grey;
@@ -41,4 +41,10 @@
 .site-btn.sb-dark:hover {
   background: orangered;
   color: white;
+}
+a.site-btn:hover{
+  background : #3d3126;
+}
+#map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+  height:510px;
 }

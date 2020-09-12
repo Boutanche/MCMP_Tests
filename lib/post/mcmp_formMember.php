@@ -7,38 +7,36 @@ if(empty($_POST["nom"]) || empty($_POST["prenom"])){
     //encrypt : password :
     $hash_pass = password_hash($_POST["user_password"], PASSWORD_DEFAULT);
     $ar_adherent = ([
-        'id' => null,
+        'idAdherent' => null,
         'nom' => $_POST['nom'],
         'prenom' => $_POST['prenom'],
-        'bornDate' => $_POST['dnaiss'],
+        'dNaiss' => $_POST['dnaiss'],
         'addr1' => $_POST['adresse1'],
-        'cdpost' => $_POST['cdpost'],
+        'cdPost' => $_POST['cdpost'],
         'ville' => $_POST['ville'],
         'email' => $_POST['email'],
         'tel' => $_POST['tel'],
-        'dadhesion' => $_POST['dadhesion'],
+        'dAdhesion' => $_POST['dadhesion'],
         'login' => $_POST['login'],
         'password' => $hash_pass,
         'idPhoto' => null,
         'idRole' => $_POST['role']
     ]);
+    $adherent = new Adherent($ar_adherent);
+    $daoAdherent = new AdherentDAO($bdd);
     //TODO : Vérifier unicité du login
-    if (isset($_POST["login"])){
+    if ($daoAdherent->exists_Log($adherent->getLogin())) {
+        $messageAdmin_FormMember = "Le Login de ce membre existe déjà";
+    }
+    else {
         $messageAdmin_FormMember = "Login_ OK ";
-        //vérifier validiter du password
         //TODO : Augmenter la sécurité en augmentant la difficulté du mp:
-        if($_POST['user_password'] == $_POST['confirm_password']){
-            $adherent = new Adherent($ar_adherent);
-            $adherent->hydrate($ar_adherent);
-            $daoAdherent = new AdherentDAO($bdd);
+        if ($_POST['user_password'] == $_POST['confirm_password']) {
             $daoAdherent->add($adherent);
             $messageAdmin_FormMember = "Formulaire Ajouter Adhérent Envoyé";
-        }
-        else{
+        } else {
             $messageAdmin_FormMember = "Mot de passe doit être identique dans les deux champs de saisie : ";
         }
-    }else{
-        $messageAdmin_FormMember = "Pseudo déjà utilisé : ";
     }
 }
 

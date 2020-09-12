@@ -1,4 +1,5 @@
 <?php
+/*
 if(!empty($_POST)) {
     if (isset($_POST['formulaire'])) {
         if ($_POST['formulaire'] == 'log') {
@@ -44,3 +45,4 @@ if(!empty($_POST)) {
         }
     }
 }
+*/

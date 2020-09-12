@@ -6,7 +6,7 @@
                 <?php
                 include('./lib/post_news.php');
                 foreach ($ar_News as $key => $tb_news) {
-                    if ($tb_news['Diffusion_Level'] == 1) {?>
+                    if ($tb_news['Code'] == 1) {?>
                             <div class="blog-post">
                             <img src="./img/img/galerie/gallery1.png" alt="">
                             <div class="blog-date"><?php echo $tb_news['DPubli'] ?></div>
@@ -16,13 +16,13 @@
                         <?php if($user_level == 2){ ?>
                                 <div class='sb-widget'>
                                     <div class='tags'>
-                                        <button class='link_modify' data-id='<?php echo $tb_news['IdNouvelle'];?>'>Modifier</button>
+                                        <button class='link_modify' data-id='<?php echo $tb_news['IdArticle'];?>'>Modifier</button>
                                     </div>
                                 </div>
                         <?php };?>
                             </div>
-                            <p><?php echo $tb_news['Intro'] ?></p>
-                            <button class="readmore" data-id='<?php echo $tb_news['IdNouvelle'];?>'>Read More <img src="./assets/img/arrow.png" alt="Image flèche"></button>
+                            <p><?php echo $tb_news['Description'] ?></p>
+                            <button class="readmore" data-id='<?php echo $tb_news['IdArticle'];?>'>Read More <img src="./assets/img/arrow.png" alt="Image flèche"></button>
                         </div> 
                     <?php }
                 }

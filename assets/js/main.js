@@ -137,6 +137,7 @@ $(window).on('load', function() {
 		My Js :
 	 -----------*/
 
+	//Gestion Modal Log :
 	$('.myBtn').on("click", function () {
 		$('#myModal').show();
 	});
@@ -146,10 +147,7 @@ $(window).on('load', function() {
 
 	});
 
-	//Tentative une modale pour modifier la news :
-	//Gestion du bouton pour afficher cette modale :
-
-	//Tentatiove Ajax modifier la news :
+	//Ajax modifier la news :
 	$('.link_modify').on('click', (event) => {
 		console.log("J'ai cliqué que le bouton");
 		var idNews = event.target.getAttribute('data-id');
@@ -188,7 +186,6 @@ $(window).on('load', function() {
 		});
 		}
 	);
-
 	//Une modale Read_More :
 	$('.readmore').on('click', (event) =>{
 		console.log("J'ai cliqué sur readmore");
@@ -206,23 +203,16 @@ $(window).on('load', function() {
 			console.log ("A fonctionné.");
 			console.log(data.IdNouvelle);
 			$("#newsTitre").html(data.Titre);
-			$("#newsTroin").html(data.Intro);
-			$("#newsTetex").html(data.Texte);
+			$("#newsTroin").html(data.Description);
+			$("#newsTetex").html(data.Detail);
 			$("#newsDPubli").html(data.DPubli);
-			$("#newsfrId").val(data.IdNouvelle);
+			$("#newsfrId").val(data.IdArticle);
 		})
 		call_ajaxGetIDNews.fail(function(jqXHR, textStatus){
 			console.log("A raté.");
 			console.log("Failed Request : " + textStatus);
 		});
 	});
-	//Récupérer en Ajax l'ID de la nouvelle pour l'afficher dans la modale :
-
-
-
-
-
-
 	//Téleverser une image pour les membres :
 	/*
 	$('#fichierImage').addEventListener('change', function () {
@@ -232,13 +222,16 @@ $(window).on('load', function() {
 		console.log(this.files[O].lastModified);
 	})
 */
-
-
-
+	// 12 Pop Up Video
+	var popUp = $('.popup-video');
+	if(popUp.length){
+		popUp.magnificPopup({
+			type: 'iframe'
+		});
+	}
 })(jQuery);
 
-
-
+//Non Implémenté :
 // Wysiwyg  :
 /*
 if($('#trumbowyg').length){
@@ -249,12 +242,7 @@ if($('#trumbowyg').length){
     console.log(title);
     console.log(description);
     ('Tu devrais pas me dire un truc quand bouton envoyé ?')
-
-
-
     $('#trumbowyg').trumbowyg({
-
-
     });
 }
 $('#trumbowig-envoyer').on("click",function(){
@@ -264,8 +252,6 @@ $('#trumbowig-envoyer').on("click",function(){
 });
 
  */
-
-
 // Modal :
 /*
 	if($('#login_mod')){
@@ -300,12 +286,4 @@ $('#trumbowig-envoyer').on("click",function(){
 			console.log("Non!" + textStatus);
 		});
 	});
-
 */
-// 12 Pop Up Video
-var popUp = $('.popup-video');
-if(popUp.length){
-	popUp.magnificPopup({
-		type: 'iframe'
-	});
-}

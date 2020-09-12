@@ -32,6 +32,8 @@
                 <label for="password">Votre mot de passe :</label>
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <p><?php echo $message_log;?></p>
+                <p>Si vous n'êtes pas membre MCMP :</p>
+                <p>Vous pouvez vous inscrire en Prospect : <a>ICI :</a></p>
                 <button class="site-btn">Se connecter</button>
             </fieldset>
         </form>

@@ -8,7 +8,7 @@ require './vendor/PHPMailer-master/src/SMTP.php';
 
 //
 //Vieille Fonction qui sert surtout à voir ce qui se passe avec une fonction hash.
-// Elle reste ici pour complexifier les password.
+// Elle reste ici pour complexifier les password. Si j'ai le temps :
 function My_Crypt($password){
     //on peut utiliser une boucle pour de 64 et remelanger les lettres ?
     //on peut ajouter un Salt (un mot secret) a concatener avec pass word ?
@@ -54,3 +54,4 @@ function Mi_Mail($Omail,$name,$objet,$message){
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
 }
+

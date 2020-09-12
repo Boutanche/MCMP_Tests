@@ -3,6 +3,9 @@
 }
 .container{
   margin-top: 5%;
+  span{
+    color: orangered;
+  }
 }
 .TitleForm{
   font-size: 30px;
@@ -12,4 +15,20 @@
 legend{
   padding-left: 10px;
   font-size: 20px;
+}
+.vignette{
+  padding-top: 5%;
+  margin: 2%;
+  background-color: #4e555b;
+}
+.info{
+  h3{
+    font-family: Teko;
+  }
+  a{
+    color: white;
+  }
+  a:hover{
+    color: orangered;
+  }
 }

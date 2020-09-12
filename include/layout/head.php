@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="./vendor/Trumbowyg-master/dist/ui/trumbowyg.min.css">
     <link rel="stylesheet" href="./vendor/summernote-0.8.18-dist/summernote.min.css" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+
     <!-- Main Stylesheets -->
     <!-- TODO : enlever <echo time()> Durant passage en prod-->
     <link rel="stylesheet" href="./assets/css/main.css?v=1.<?php echo time();?>">
@@ -27,5 +29,4 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<!-- Je ne sais pas pourquoi j'ai laissé trainer cette div ici -->
-<div class="face"></div>
+

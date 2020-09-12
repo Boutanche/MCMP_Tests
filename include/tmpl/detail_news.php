@@ -5,10 +5,11 @@
             <div class="col-lg-8 posts-list">
                 <div class="single-post">
                     <div class="feature-img">
-                        <img class="img-fluid" src="assets/img/blog/single_blog_1.png" alt="">
+                        <img class="img-fluid" src="assets/img/loans/1.jpg" alt="">
+                        <h2 id="newsTitre" > </h2>
                     </div>
                     <div class="blog_details">
-                        <h2 id="newsTitre" > </h2>
+
                         <ul class="blog-info-link mt-3 mb-4">
                             <!-- TODO : Modifier la table nouvelle pour garder l'id de l'auteur de la news -->
                             <li><a href="#"><i class="fa fa-user"></i> Organisateur : </a></li>

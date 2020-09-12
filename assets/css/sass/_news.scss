@@ -41,3 +41,25 @@
     border: 1px solid black;
     padding: 16px;
   }
+.about-text {
+  font-family: Teko;
+  p{
+    font-family: Barlow;
+  }
+}
+.feature-img{
+  .img-fluid{
+    padding-top: 1%;
+  }
+  h2{
+    font-family: Teko;
+  }
+  .quotes{
+    color: black;
+    font-family: Teko;
+  }
+}
+.posts-list{
+  overflow-y: auto;
+  max-height: 700px;
+}
